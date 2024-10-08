@@ -83,14 +83,16 @@ const TransactionTable = () => {
     if (searchValue === "") {
       setFilteredTransactions(transactions);
     } else {
-      const filtered = transactions.filter(
-        (transaction) =>
-          transaction.title.toLowerCase().includes(searchValue) ||
-          transaction.description.toLowerCase().includes(searchValue) ||
-          transaction.price.toString().includes(searchValue) ||
-          transaction.category.toString().includes(searchValue) ||
-          transaction.year.toString().includes(searchValue)
-      );
+      const filtered = transactions.filter((transaction) => {
+        const titleMatch = transaction.title?.toLowerCase().includes(searchValue);
+        const descriptionMatch = transaction.description?.toLowerCase().includes(searchValue);
+        const priceMatch = transaction.price?.toString().includes(searchValue);
+        const categoryMatch = transaction.category?.toString().includes(searchValue);
+        const yearMatch = transaction.year?.toString().includes(searchValue);
+
+        return titleMatch || descriptionMatch || priceMatch || categoryMatch || yearMatch;
+      });
+
       setFilteredTransactions(filtered);
     }
     setCurrentPage(1);
