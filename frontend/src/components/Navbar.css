@@ -1,59 +1,56 @@
 /* Navbar Background */
 .navbar {
-    background-color: skyblue; /* Light background color */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: skyblue; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
   
   .sticky-top {
-    z-index: 1030; /* Ensures the navbar stays above other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    z-index: 1030; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   }
   /* Navbar Brand */
   .navbar-brand {
     font-size: 24px;
     font-weight: bold;
-    color: #343a40; /* Dark color for brand text */
-    transition: color 0.3s ease; /* Smooth transition */
+    color: #343a40; 
+    transition: color 0.3s ease; 
   }
   
   .navbar-brand:hover {
-    color: #007bff; /* Brand text color change on hover */
+    color: #007bff; 
   }
   
-  /* Navbar Links */
+  
   .nav-link {
-    color: #343a40; /* Dark color for links */
+    color: #343a40; 
     font-size: 16px;
     margin-right: 15px;
-    text-transform: uppercase; /* Uppercase letters */
-    font-weight: 500; /* Medium weight */
-    transition: color 0.3s ease; /* Smooth transition */
+    text-transform: uppercase;
+    font-weight: 500; 
+    transition: color 0.3s ease; 
   }
   
-  /* Hover effect for links */
   .nav-link:hover {
-    color: #007bff; /* Blue color on hover */
+    color: #007bff; 
     text-decoration: none;
   }
   
-  /* Active Link */
   .nav-link.active {
-    color: #007bff; /* Blue color for active link */
-    font-weight: bold; /* Make active link bold */
+    font-weight: bold; 
   }
   
-  /* Navbar Toggle Icon */
+
   .navbar-toggler {
-    border: none; /* Remove the border around the toggle */
-    outline: none; /* Remove default outline */
+    border: none; 
+    outline: none; /
   }
   
-  /* Responsive Collapse */
+
   .navbar-collapse {
-    justify-content: flex-end; /* Align links to the right */
+    justify-content: flex-end;
   }
   
-  /* Styling for smaller screens */
+ 
   @media (max-width: 991px) {
     .navbar {
       background-color: #f8f9fa;
@@ -62,7 +59,6 @@
     .nav-link {
       margin-right: 0;
       padding: 10px 0;
-      font-size: 18px; /* Slightly larger links on mobile */
     }
   
     .navbar-brand {
