@@ -13,7 +13,6 @@ const SimpleNavbar = () => {
             <a href="/" className="nav-link">Home</a>
             <a href="/about" className="nav-link">Transaction</a>
             <a href="/contact" className="nav-link">About Transaction</a>
-            {/* Add more links as needed */}
           </Nav>
         </Navbar.Collapse>
       </Container>

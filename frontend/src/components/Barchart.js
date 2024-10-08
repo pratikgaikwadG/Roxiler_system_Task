@@ -1,7 +1,7 @@
 // BarChartComponent.js
 import React, { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
-import { Chart, registerables } from "chart.js"; // Import registerables
+import { Chart, registerables } from "chart.js"; 
 import axios from "axios";
 
 // Register all necessary components
@@ -23,27 +23,26 @@ const BarChartComponent = ({ selectedMonth, selectedYear }) => {
       );
 
       if (response.status === 200) {
-        setChartData(response.data); // Set chart data
+        setChartData(response.data); 
       } else {
         console.error("Failed to fetch data:", response.data);
-        setChartData([]); // Reset data if not successful
+        setChartData([]); 
       }
     } catch (error) {
       console.error(
         "Error fetching bar chart data:",
         error.response ? error.response.data : error.message
       );
-      setChartData([]); // Reset data on error
+      setChartData([]); 
     }
   };
 
   useEffect(() => {
     if (selectedMonth && selectedYear) {
-      fetchBarChartData(); // Fetch data whenever selected month or year changes
+      fetchBarChartData(); 
     }
   }, [selectedMonth, selectedYear]);
 
-  // Prepare data for the Bar chart
   const data = {
     labels: [
       "0 - 100",
@@ -60,8 +59,8 @@ const BarChartComponent = ({ selectedMonth, selectedYear }) => {
     datasets: [
       {
         label: "Number of Items",
-        data: chartData.map((range) => range.count || 0), // Extract count from fetched data
-        backgroundColor: "rgba(75, 192, 192, 0.6)", // Example color
+        data: chartData.map((range) => range.count || 0), 
+        backgroundColor: "rgba(75, 192, 192, 0.6)", 
       },
     ],
   };

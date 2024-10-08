@@ -3,8 +3,8 @@ import axios from "axios";
 import { Table, Form, InputGroup, Row, Col } from "react-bootstrap";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Button } from "react-bootstrap";
-import BarChartComponent from "./Barchart"; // Import the BarChartComponent
-import CategoryPieChart from "./Piechart"; // Import the Pie Chart component
+import BarChartComponent from "./Barchart"; 
+import CategoryPieChart from "./Piechart"; 
 
 import "./style.css";
 
