@@ -1,0 +1,33 @@
+/* Pie chart column styling */
+.pie-chart-column {
+    flex: 2; /* Maintain smaller size for the pie chart column */
+    display: flex;
+    justify-content: flex-start; /* Align the pie chart to the left */
+    align-items: center;
+    padding-left: 20px; /* Optional: Add padding for better spacing */
+}
+
+/* Pie chart container styling */
+.pie-chart-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px; /* Reduced size for pie chart */
+}
+
+/* Adjust the size of the pie chart */
+.chart-wrapper {
+    width: 150px; /* Adjusted width for the pie chart */
+    height: 150px; /* Adjusted height for the pie chart */
+    margin: 0; /* Remove auto centering */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .chart-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+}

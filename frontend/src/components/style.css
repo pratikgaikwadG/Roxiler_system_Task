@@ -1,0 +1,110 @@
+/* Container for the whole table and chart */
+.table-container {
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Flexbox layout for the search/filter row */
+.search-filter-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Dropdown and search bar styles */
+.search-box {
+    width: 200px;
+}
+
+.dropdown-container .dropdown-select {
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search-button {
+    white-space: nowrap;
+    padding: 8px 20px;
+    background-color: #d4a250;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Bar chart container */
+/* Bar chart container with reduced width and padding */
+.bar-chart-container {
+    background-color: white; /* White background for the bar chart */
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Maintains full width within the flex container */
+    max-width: 500px; /* Optional: sets a maximum width for the chart */
+}
+
+/* Layout for the table and chart area */
+.chart-and-table-container {
+    display: flex;
+    gap: 20px; /* Space between chart and stats */
+}
+
+/* Adjusting Bar Chart and Stats columns */
+.chart-column {
+    flex: 4;
+}
+
+.stats-column {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+.table {
+    background-color: #f7f7f7;
+}
+
+.table th {
+    background-color: #d4a250;
+    color: black;
+}
+
+.table td,
+.table th {
+    padding: 15px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+/* Pagination styling */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-arrows {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.pagination-arrow.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-number {
+    flex-grow: 1;
+    text-align: center;
+}
