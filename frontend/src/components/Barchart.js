@@ -4,7 +4,6 @@ import { Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js"; 
 import axios from "axios";
 
-// Register all necessary components
 Chart.register(...registerables);
 
 const BarChartComponent = ({ selectedMonth, selectedYear }) => {
@@ -13,10 +12,10 @@ const BarChartComponent = ({ selectedMonth, selectedYear }) => {
   const fetchBarChartData = async () => {
     try {
       const monthIndex =
-        new Date(Date.parse(selectedMonth + " 1, 2020")).getMonth() + 1; // Convert month name to number
+        new Date(Date.parse(selectedMonth + " 1, 2020")).getMonth() + 1; 
       console.log(
         `Fetching data for month: ${monthIndex}, year: ${selectedYear}`
-      ); // Log values
+      ); 
 
       const response = await axios.get(
         `http://localhost:5001/api/transaction/getBarChart?month=${monthIndex}&year=${selectedYear}`
@@ -43,6 +42,7 @@ const BarChartComponent = ({ selectedMonth, selectedYear }) => {
     }
   }, [selectedMonth, selectedYear]);
 
+  // Prepare data for the Bar chart
   const data = {
     labels: [
       "0 - 100",
